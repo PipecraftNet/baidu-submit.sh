@@ -28,8 +28,10 @@ submit() {
   curl -H 'Content-Type:text/plain' --data-binary @${FILE} "http://data.zz.baidu.com/urls?site=$SITE_URL&token=$TOKEN"
 }
 
+rm -f urls*
+
 echo Get sitemap $SITEMAP_URL
-curl  --connect-timeout 5 -s $SITEMAP_URL | grep "<loc>" | grep -o -E "http[^<>]+" > urls.txt
+curl  --connect-timeout 60 -s $SITEMAP_URL | grep "<loc>" | grep -o -E "http[^<>]+" > urls.txt
 
 # submit urls.txt
 split -l 1000 urls.txt urls-
