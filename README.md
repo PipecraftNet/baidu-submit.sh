@@ -46,6 +46,7 @@ crontab -e
 - https://github.com/jalenchuh/url-submit (python)
 - https://github.com/wansho/baidu-url-submit (python)
 - https://github.com/Gaoyongxian666/baidu_submit (python)
+- https://github.com/nogeek-cn/baidu-seo-auto-push-daily (shell)
 
 ## License
 
